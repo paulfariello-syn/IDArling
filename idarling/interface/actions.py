@@ -316,7 +316,7 @@ class SaveActionHandler(ActionHandler):
         progress.setWindowIcon(QIcon(icon_path))
 
         # Send the packet to upload the file
-        packet.upback = partial(SaveActionHandler._on_progress, progress)
+        #packet.upback = partial(SaveActionHandler._on_progress, progress)
         d = plugin.network.send_packet(packet)
         if d:
             d.add_callback(
